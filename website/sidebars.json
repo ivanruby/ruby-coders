@@ -1,0 +1,9 @@
+{
+  "docs": {
+    "Getting started": ["doc1", "doc2"],
+    "Activities": ["doc3"]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  }
+}
