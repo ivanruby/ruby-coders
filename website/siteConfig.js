@@ -23,11 +23,8 @@ const users = [
 const siteConfig = {
   title: 'Ruby Coders', // Title for your website.
   tagline: 'A website for testing',
-  url: 'https://ivanruby.github.io/ruby-coders', // Your website URL
-  baseUrl: '/', // Base URL for your project */
-  // For github.io type URLs, you would set the url and baseUrl like:
-  //   url: 'https://facebook.github.io',
-  //   baseUrl: '/ruby-coders/',
+  url: 'https://ivanruby.github.io', // Your website URL
+  baseUrl: '/ruby-coders/', // Base URL for your project */
 
   // Used for publishing and more
   projectName: 'Ruby-coders',
@@ -41,7 +38,7 @@ const siteConfig = {
     {doc: 'doc1', label: 'Getting started'},
     {doc: 'home', label: 'Welcome' },
   ],
-
+  
   // If you have users set above, you add it here:
   users,
 
