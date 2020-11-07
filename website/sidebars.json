@@ -1,9 +1,24 @@
 {
-  "docs": {
-    "Getting started": ["doc1", "doc2"],
-    "Activities": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+  "main": {
+    "Getting started": ["home","requirements", "approach", "resources"],
+    "Tutorial": [
+          "tutorial/tut-home",
+          "tutorial/tut-wiring",
+          "tutorial/tut-calibration",
+          "tutorial/tut-logic",
+          "tutorial/tut-solution"
+    ],
+    "Activities": [
+      {
+        "type": "subcategory",
+        "label": "Blinking LEDs with a button",
+        "ids": [
+          "activity1/act1-wiring",
+          "activity1/act1-calibration",
+          "activity1/act1-logic",
+          "activity1/act1-solution"
+        ]
+      }
+    ]
   }
 }

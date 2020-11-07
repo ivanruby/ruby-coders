@@ -1,23 +1,22 @@
 ---
 id: home
 title: Welcome
+hide_title: true
 sidebar_label: Home
 ---
 
-The RubyCoders is an informal group that holds weekly meetings where we take an online, collaborative, and hands-on approach to learning computer programming and electronics using the Arduino platform.
+![Ruby Coders](assets/img/logo.png)
+The RubyCoders is an informal group that holds weekly meetings where we take an online, collaborative, and hands-on approach to learning computer programming and electronics using the  <a href="https://arduino.cc" target="_blank">Arduino platform</a>.
 
-We meet on Zoom and use an online simulator, [Tinkercad Circuits](https://www.tinkercad.com/circuits), to increase the accessibility of our activities. Every Thursday, between 4 and 6PM, we work on real-world projects and troubleshooting challenges designed to stimulate the group into learning together and comprehensively.
+Through our activities, we explore a variety of topics such as Microcontrollers, Arduino Platform, Electronics, Computer programming, Problem-solving, and Autonomous learning.
 
-Topics: Microcontrollers, Arduino, Electronics, Computer programming, Problem-solving, Autonomous learning 
+We meet on Zoom and use an online simulator, <a href="https://www.tinkercad.com/circuits" target="_blank">Tinkercad Circuits</a>, to increase the accessibility of our activities. Every Thursday, between 4 and 6PM, we work on real-world projects and troubleshooting challenges designed to stimulate the group into learning together and comprehensively.
 
-## Requirements
+## Contact
+If you are interested in joining, you can reach out to us by [clicking here](). 
 
-The only real requirement to participate is that you have access to a device with an internet connection. We are a very diverse group, with participants with different levels of expertise and are not focus
+You can also contact us through <a href="https://educationmakers.ca" target="_blank">our website</a> or follow us on Social media:
 
-## Approach
+Facebook: <a href="https://www.facebook.com/educationmakers1" target="_blank">EducationMakers</a>
 
-We take a Project-Based Learning pedagogical approach in which learners work on a structured sequence of tasks that require or employ problem-solving skills while learning about and eliciting computational concepts. 
-
-We prioritize:
-- Learning together and from each other over being taught
-- Exploring and understanding over memorizing
+Twitter: <a href="https://twitter.com/educationmakers" target="_blank">@educationmakers</a>

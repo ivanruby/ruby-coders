@@ -1,7 +1,7 @@
 ---
 id: doc1
 title: Welcome
-sidebar_label: Home
+sidebar_label: Home 
 ---
 
 The RubyCoders is an informal group that holds weekly meetings where we take an online, collaborative, and hands-on approach to learning computer programming and electronics using the Arduino platform.

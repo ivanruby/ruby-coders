@@ -27,20 +27,20 @@ const siteConfig = {
   baseUrl: '/ruby-coders/', // Base URL for your project */
 
   // Used for publishing and more
-  projectName: 'Ruby-coders',
+  projectName: 'ruby-coders',
   organizationName: 'EducationMakers',
-  // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
-
+  
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Getting started'},
-    {doc: 'home', label: 'Welcome' },
+    {doc: 'doc1', label: 'Join'},
+    {doc: 'doc2', label: 'Educators'},
+    {doc: 'doc3', label: 'Abous us'},
   ],
   
-  // If you have users set above, you add it here:
-  users,
+  algolia: {
+    apiKey: '1b7ed12c8fb2bbf86875d1464be8fc0a',
+    indexName: 'dev_RUBYCODERS',
+  },
 
   /* path to images for header/footer */
   headerIcon: '',
