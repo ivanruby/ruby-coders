@@ -29,18 +29,18 @@ const siteConfig = {
   // Used for publishing and more
   projectName: 'ruby-coders',
   organizationName: 'EducationMakers',
-  
+
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Join'},
-    {doc: 'doc2', label: 'Educators'},
-    {doc: 'doc3', label: 'Abous us'},
+    {doc: 'join', label: 'Join us'},
+    //{doc: 'educators', label: 'Educators'},
+    //{doc: 'about', label: 'About us'},
   ],
   
-  algolia: {
-    apiKey: '1b7ed12c8fb2bbf86875d1464be8fc0a',
-    indexName: 'dev_RUBYCODERS',
-  },
+  // algolia: {
+  //   apiKey: '1b7ed12c8fb2bbf86875d1464be8fc0a',
+  //   indexName: 'dev_RUBYCODERS',
+  // },
 
   /* path to images for header/footer */
   headerIcon: '',

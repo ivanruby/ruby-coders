@@ -13,7 +13,7 @@ Through our activities, we explore a variety of topics such as Microcontrollers,
 We meet on Zoom and use an online simulator, <a href="https://www.tinkercad.com/circuits" target="_blank">Tinkercad Circuits</a>, to increase the accessibility of our activities. Every Thursday, between 4 and 6PM, we work on real-world projects and troubleshooting challenges designed to stimulate the group into learning together and comprehensively.
 
 ## Contact
-If you are interested in joining, you can reach out to us by [clicking here](). 
+If you are interested in joining, you can reach out to us by [clicking here](join). 
 
 You can also contact us through <a href="https://educationmakers.ca" target="_blank">our website</a> or follow us on Social media:
 
