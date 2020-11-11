@@ -32,9 +32,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    {doc: 'requirements', label: 'Getting started'},
     {doc: 'join', label: 'Join us'},
-    //{doc: 'educators', label: 'Educators'},
-    //{doc: 'about', label: 'About us'},
+    // {doc: 'educators', label: 'Educators'},
+    // {doc: 'about', label: 'About us'},
   ],
   
   // algolia: {
