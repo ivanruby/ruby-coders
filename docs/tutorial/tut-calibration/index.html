@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Calibration phase · Ruby Coders</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**Task**: Establish an association between the physical components in a circuit and their representations in your program. Click on &lt;a href=&quot;https://www.tinkercad.com/things/2ZvvhqKoRWt&quot; target=&quot;_blank&quot;&gt;this link&lt;/a&gt; to copy the Tinkercad project to your account and work on the task."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Calibration phase · Ruby Coders"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivanruby.github.io/ruby-coders/"/><meta property="og:description" content="**Task**: Establish an association between the physical components in a circuit and their representations in your program. Click on &lt;a href=&quot;https://www.tinkercad.com/things/2ZvvhqKoRWt&quot; target=&quot;_blank&quot;&gt;this link&lt;/a&gt; to copy the Tinkercad project to your account and work on the task."/><meta property="og:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/ruby-coders/"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/ruby-coders/js/scrollSpy.js"></script><link rel="stylesheet" href="/ruby-coders/css/main.css"/><script src="/ruby-coders/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/ruby-coders/"><h2 class="headerTitle">Ruby Coders</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/ruby-coders/docs/requirements" target="_self">Getting started</a></li><li class=""><a href="/ruby-coders/docs/join" target="_self">Join us</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tutorial</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/home">Home</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/requirements">Requirements</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/approach">Approach</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorial<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/tutorial/tut-home">Home</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/tutorial/tut-wiring">Wiring phase</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/ruby-coders/docs/tutorial/tut-calibration">Calibration phase</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/tutorial/tut-logic">Logic phase</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/tutorial/tut-solution">Solution</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Calibration phase</h1></header><article><div><span><p><strong>Task</strong>: Establish an association between the physical components in a circuit and their representations in your program. Click on <a href="https://www.tinkercad.com/things/2ZvvhqKoRWt" target="_blank">this link</a> to copy the Tinkercad project to your account and work on the task.</p>
+<p><strong>Focus</strong>: <code>Programming</code>, <code>Testing</code></p>
+<p><strong>What we learn</strong>: How to include, configure and test physical components through programming</p>
+<p><strong>Example</strong>: <em>Using Arduino C/C++, configure the pins where the LED and button are connected</em></p>
+<pre><code class="hljs css language-C"><span class="hljs-comment">/* Step 1. Create a variable for the pin connected to the LED
+           and another for the pin connected to the button 
+   Tip: Creating a variable allows you to call a pin by name
+        instead of its number. */</span>
+<span class="hljs-keyword">byte</span> LED = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">byte</span> button = <span class="hljs-number">3</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-comment">/* Step 2. Configure LED pin as an Output and button pin as an Input
+
+     Reminder: Any programmable pin (GPIO) can be used either as
+     an INPUT (receive data/voltage) or OUTPUT (send data/voltage) */</span>
+     <span class="hljs-built_in">pinMode</span>(LED, <span class="hljs-literal">OUTPUT</span>);
+     <span class="hljs-built_in">pinMode</span>(button, <span class="hljs-literal">INPUT_PULLUP</span>);
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/ruby-coders/docs/tutorial/tut-wiring"><span class="arrow-prev">← </span><span>Wiring phase</span></a><a class="docs-next button" href="/ruby-coders/docs/tutorial/tut-logic"><span>Logic phase</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright"><a href="https://educationmakers.ca/" target="_blank"><img src="https://www.ivanruby.com/images/edmakers-logo.png" alt="Education Makers" height="40"/></a><br/>Copyright © 2020 EducationMakers</section></footer></div></body></html>
