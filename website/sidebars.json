@@ -7,6 +7,16 @@
           "tutorial/tut-calibration",
           "tutorial/tut-logic",
           "tutorial/tut-solution"
+    ],
+    "Activities": [
+      {
+        "type": "subcategory",
+        "label": "Street lights",
+        "ids": [
+          "activity1/act1-prompts",
+          "activity1/act1-solution"
+        ]
+      }
     ]
   }
 }

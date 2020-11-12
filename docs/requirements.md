@@ -8,4 +8,4 @@ The only requirements to participate is that you have access to a device with an
 
 As we use the Tinkercad circuits platform as a simulator, you'll also need to have a free, personal account.
 
-Create one by <a href="https://www.tinkercad.com/join" target="_blank">following this link</a>.
+You can create one by <a href="https://www.tinkercad.com/join" target="_blank">following this link</a>.

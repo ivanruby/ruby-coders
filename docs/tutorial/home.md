@@ -22,5 +22,3 @@ Both components are connected to an Arduino microcontroller.
 There will also be an accompanying image of the current circuit as a starting point.
 
 ![Sample project prompt image](assets/img/tutorial/sample-task-prompt.png)
-
-> Each subsequent part, **always** includes a solution of the tasks from the previous. That is, the *Calibration* part includes a solution for the tasks in *Wiring*. Similarly, the *Logic* part includes a solution for the tasks in *Calibration*. 

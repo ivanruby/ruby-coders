@@ -3,6 +3,12 @@ id: act1-solution
 title: Solution
 ---
 
-Here is the solution for the Activity Blinking LEDs
+Congratulations for attempting the activity. Below, we have a sample solution for it.
 
-<iframe width="100%" height="453" src="https://www.tinkercad.com/embed/8S3Q2eiXb6h?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+If yours doesn't look exactly like it, don't worry. As long as the behavior is the same, both solutions are acceptable.
+
+Link: <a href="https://www.tinkercad.com/things/fbV2d9iqKSS" target="_blank">Solution</a>
+
+You can also test the project here by clicking on the `Start Simulation`.
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/fbV2d9iqKSS" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>

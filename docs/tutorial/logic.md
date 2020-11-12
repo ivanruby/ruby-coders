@@ -3,13 +3,16 @@ id: tut-logic
 title: Logic phase
 ---
 
-**Task**: After wiring and configuring the physical components, design, test and implement the logical steps/operations to make the project work. Click on <a href="https://www.tinkercad.com/things/5IvAKVC2TOg" target="_blank">this link</a> to copy the Tinkercad project to your account and work on the task.
+**Task**: After wiring and configuring the physical components, design, test and implement the logical steps/operations to make the project work. 
+
+You will do so by clicking on a link to a Tinkercad project and completing the activity there.
+Here is a sample calibration task: <a href="https://www.tinkercad.com/things/5IvAKVC2TOg" target="_blank">Using an LED with a Button - Part 3 - Logic</a>
 
 **Focus**: `Problem-solving`, `Algorithmic thinking`, `Programming`, `Testing`
 
-**What we learn**: About different components we can use and how they are physically connected in electronics circuits
+**What we learn**: About how to generate algorithms, implement and test different Arduino C/C++ instructions
 
-**Example**: *Completing the circuit that connects an Arduino microcontroller, an LED and a button*
+**Sample solution**: *Completing the circuit that connects an Arduino microcontroller, an LED and a button*
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--Algorithm-->
