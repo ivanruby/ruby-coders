@@ -13,6 +13,13 @@ We prioritize:
 
 > While we generally work together on activities, there is no restriction on working individually. The activities are designed in such a way that it is equally possible to work on them individually and in groups. 
 
+## Phases
+Each project is divided into 3 phases each having an a link to a Tinkercad project. Namely,
+
+- **Wiring:** When we establish physical connetions between components
+- **Configuration:** When we use programming to represent and configure physical components
+- **Logic:** When we create the logical steps in our program to manipulate physical components as to make our circuit behave according to the project description
+
 ## Roles
 During the online group meetings, everyone goes simultaneously through the activity on their devices and one individual, **the lead troubleshooter**, shares their screen and talks about their ideas as they're going through it, essentially thinking out loud. The rest of the group contributes by making questions, comments, as well as sharing and validating ideas.
 
