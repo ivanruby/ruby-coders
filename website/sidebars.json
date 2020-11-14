@@ -1,6 +1,14 @@
 {
   "main": {
     "Getting started": ["home","requirements", "approach"],
+    "Guides": [
+      "guides/the-arduino",
+      "guides/circuits",      
+      "guides/programming",
+      "guides/components",
+      "guides/algorithms",
+      "guides/troubleshooting"
+    ],
     "Tutorial": [
           "tutorial/tut-home",
           "tutorial/tut-wiring",
@@ -8,6 +16,7 @@
           "tutorial/tut-logic",
           "tutorial/tut-solution"
     ],
+    
     "Activities": [
       {
         "type": "subcategory",

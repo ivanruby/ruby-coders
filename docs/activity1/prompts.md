@@ -5,9 +5,15 @@ sidebar_label: Prompts
 ---
 
 ```text
-In this project, we will attempt to reconstruct the behavior of street lights.
-An LED should turn ON or OFF based on the intensity of ambient light. To do so, 
-we will use a light sensor, also called photoresistor
+In this project, we will attempt to reproduce the behavior of street lights.
+Remember that street lights turn ON when it starts becoming dark, i.e., when 
+the light in the environment drops below a certain intensity.
+When the intensity goes above this point (when it becomes brighter) the lights
+are turned OFF, automatically.
+
+In our project, we'll use a LED and it should automatically turn ON or OFF based
+on the intensity of ambient light. To do so, we will use a light sensor,
+also called photoresistor
 ```
 
 ## States
