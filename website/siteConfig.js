@@ -21,13 +21,13 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Ruby Coders', // Title for your website.
-  tagline: 'A website for testing',
+  title: 'RubyCoding', // Title for your website.
+  tagline: 'An online, hands-on approach to learning electronics and computer programming',
   url: 'https://ivanruby.github.io', // Your website URL
   baseUrl: '/ruby-coders/', // Base URL for your project */
 
   // Used for publishing and more
-  projectName: 'ruby-coders',
+  projectName: 'rubycoding',
   organizationName: 'EducationMakers',
 
   // For no header links in the top nav bar -> headerLinks: [],
@@ -45,8 +45,8 @@ const siteConfig = {
 
   /* path to images for header/footer */
   headerIcon: '',
-  footerIcon: '',
-  favicon: '',
+  footerIcon: 'docs/assets/img/logo.png',
+  favicon: 'docs/assets/img/favicon.ico',
 
   /* Colors for website */
   colors: {

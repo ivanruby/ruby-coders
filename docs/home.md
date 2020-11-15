@@ -6,7 +6,7 @@ sidebar_label: Home
 ---
 
 ![Ruby Coders](assets/img/logo.png)
-The RubyCoders is an informal group that holds weekly meetings where we take an online, collaborative, and hands-on approach to learning computer programming and electronics using the  <a href="https://arduino.cc" target="_blank">Arduino platform</a>.
+The *RubyCoders* is an informal group that holds weekly meetings where we take an online, collaborative, and hands-on approach to learning computer programming and electronics using the  <a href="https://arduino.cc" target="_blank">Arduino platform</a>.
 
 Through our activities, we explore a variety of topics such as `Microcontrollers`, `Arduino Platform`, `Electronics`, `Computer programming`, `Problem-solving`, and `Autonomous learning`.
 

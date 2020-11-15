@@ -28,7 +28,7 @@ As each project is divided into 3 parts, after concluding the tasks in the first
 ## Rubrics
 Right after completing each part, it is important to keep track of how it went and reflect on what was learned.
 We do so through a simple questionnaire with 4 questions/prompts:
-- I still don't understand:
-- I understand but can't yet do it on my own:
-- I understand and can do it on my own:
-- I understand, can do it on my own and can apply the same idea in a different context:
+- I still don't understand: `list of concepts`
+- I understand but can't yet do it on my own: `list of concepts`
+- I understand and can do it on my own: `list of concepts`
+- I understand, can do it on my own and can apply the same idea in a different context: `list of concepts`

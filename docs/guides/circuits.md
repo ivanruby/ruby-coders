@@ -6,7 +6,7 @@ sidebar_label: Circuits
 
 Circuits
 
-## Polarity
+## Sensors and actuators
 
 ## Analog and Digital signals
 

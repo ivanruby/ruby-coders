@@ -8,7 +8,7 @@ Troubleshooting, the process of identifying a problem, planning and applying a s
 
 Here are sample strategies and situations:
 
-### Wiring
+## Wiring
 - Check if the component is wired. If not, wire it
     
     **Example:** *Forgetting to connect one terminal of a resistor, a LED, a button*
@@ -26,7 +26,12 @@ Here are sample strategies and situations:
 
      **Example:** *Wiring a component with 3.3 Volts when it requires 5 Volts* 
     
-### Configuration
+## Configuration
+- Check if you created a variable for the pin that is connected to the component
+- Check if you configured the pin with the appropriate mode
+- Check if you initialized the component, if it needs so
+
+## Logic
 - Check if you created a variable for the pin that is connected to the component
 - Check if you configured the pin with the appropriate mode
 - Check if you initialized the component, if it needs so
