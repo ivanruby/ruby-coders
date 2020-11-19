@@ -1,11 +1,11 @@
 {
-    "index_name": "dev_RUBYCODERS",
-    "start_urls": ["https://ivanruby.github.io/ruby-coders/docs/en/home"],
-    "selectors": {
-      "lvl0": ".post",
-      "lvl1": "h1",
-      "lvl2": "h2",
-      "lvl3": "h3",
-      "text": "p"
-    }
+  "index_name": "dev_RUBYCODERS",
+  "start_urls": ["https://ivanruby.github.io/ruby-coders/docs/en/home"],
+  "selectors": {
+    "lvl0": ".post",
+    "lvl1": "h1",
+    "lvl2": "h2",
+    "lvl3": "h3",
+    "text": "p"
   }
+}

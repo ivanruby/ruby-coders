@@ -24,6 +24,14 @@
           "activity1/act1-prompts",
           "activity1/act1-solution"
         ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Temperature indicator",
+        "ids": [
+          "activity2/act2-prompts",
+          "activity2/act2-solution"
+        ]
       }
     ]
   }
