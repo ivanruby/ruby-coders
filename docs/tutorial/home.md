@@ -1,7 +1,7 @@
 ---
 id: tut-home
 title: How it all starts
-sidebar_label: Home 
+sidebar_label: Introduction 
 ---
 
 At the beginning of our activities, we have a description of the project. As much as possible, the projects we work on are designed to integrate real-world scenarios. However, before getting there, we also need to develop an understanding of how the different components we can use work. 

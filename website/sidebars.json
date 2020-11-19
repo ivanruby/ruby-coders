@@ -4,10 +4,9 @@
     "Guides": [
       "guides/the-arduino",
       "guides/circuits",      
-      "guides/programming",
-      "guides/components",
-      "guides/algorithms",
-      "guides/troubleshooting"
+      "guides/programming-part-1",
+      "guides/programming-part-2",
+      "guides/components"
     ],
     "Tutorial": [
           "tutorial/tut-home",

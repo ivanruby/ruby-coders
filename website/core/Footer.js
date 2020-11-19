@@ -23,7 +23,7 @@ class Footer extends React.Component {
             href="https://educationmakers.ca/"
             target="_blank">
             <img
-              src='assets/img/edmakers-logo.png'
+              src='/ruby-coders/docs/assets/img/edmakers-logo.png'
               alt="Education Makers"
               height="40"
             />

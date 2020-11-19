@@ -48,7 +48,9 @@ However, these connections can quickly become difficult to manage and to underst
 
 In a breadboard, we have **rows and columns of interconnected points**. In the image above, each point in the last row (in red) will be connected to the 3.3v pin from the Arduino board. Similarly, each point on the row before the last (in black) will be connected to the GND pin.
 
-In the middle of the board, the interconnections change orientation. We have two sets of vertical columns **from a to e** and **f to j** that are interconnected. 
+In the middle of the board, the interconnections change orientation. We have two sets of interconnected points forming distinct columns **a to e** and **f to j**.
+
+This way, to connect our two LEDs, we just need to place them on the breadboard with each terminal in a different column. Next, we connect the column with the negative terminal of the LED to the row connected to GND. We do the same for the positive terminal and repeat for the other LED.
 
 ![Arduino powering a breadboard](assets/img/arduino-breadboard-with-leds.png)
 

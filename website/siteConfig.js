@@ -21,7 +21,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'RubyCoding', // Title for your website.
+  title: 'RubyCoders', // Title for your website.
   tagline: 'An online, hands-on approach to learning electronics and computer programming',
   url: 'https://ivanruby.github.io', // Your website URL
   baseUrl: '/ruby-coders/', // Base URL for your project */
