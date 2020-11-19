@@ -32,8 +32,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    {doc: 'join', label: 'Join us', align: 'left'},
     {doc: 'requirements', label: 'Getting started'},
-    {doc: 'join', label: 'Join us'},
     // {doc: 'educators', label: 'Educators'},
     // {doc: 'about', label: 'About us'},
   ],
@@ -69,7 +69,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} EducationMakers`,
+  copyright: `Copyright © ${new Date().getFullYear()} Ivan Ruby with \u2764 at EducationMakers`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -101,6 +101,8 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   // repoUrl: 'https://github.com/facebook/test-site',
+
+  translationRecruitingLink: 'https://crowdin.com/project/rubycoders'
 };
 
 module.exports = siteConfig;
