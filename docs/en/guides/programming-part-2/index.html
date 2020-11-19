@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Programming Part 2 · RubyCoders</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="After understanding the basic structure of our program and how to store values, we need to explore how to interact with the components in our circuits."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Programming Part 2 · RubyCoders"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivanruby.github.io/ruby-coders/"/><meta property="og:description" content="After understanding the basic structure of our program and how to store values, we need to explore how to interact with the components in our circuits."/><meta property="og:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/ruby-coders/docs/assets/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/ruby-coders/js/scrollSpy.js"></script><link rel="stylesheet" href="/ruby-coders/css/main.css"/><script src="/ruby-coders/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/ruby-coders/en"><h2 class="headerTitle">RubyCoders</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/ruby-coders/docs/en/join" target="_self">Join us</a></li><li class="siteNavGroupActive"><a href="/ruby-coders/docs/en/requirements" target="_self">Getting started</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/ruby-coders/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/ruby-coders/docs/fr/guides/programming-part-2">Français</a></li><li><a href="https://crowdin.com/project/rubycoders" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/home">Home</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/requirements">Requirements</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/approach">Approach</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/guides/the-arduino">The Arduino</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/guides/circuits">Circuits</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/guides/programming-part-1">Programming Part 1</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/ruby-coders/docs/en/guides/programming-part-2">Programming Part 2</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/guides/components">Components</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorial<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/tutorial/tut-home">Introduction</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/tutorial/tut-wiring">Wiring phase</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/tutorial/tut-calibration">Calibration phase</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/tutorial/tut-logic">Logic phase</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/tutorial/tut-solution">Solution</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Activities<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Street lights</h4><ul><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/activity1/act1-prompts">Prompts</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/activity1/act1-solution">Solution</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Programming Part 2</h1></header><article><div><span><p>After understanding the basic structure of our program and how to store values, we need to explore how to interact with the components in our circuits.</p>
+<h2><a class="anchor" aria-hidden="true" id="input"></a><a href="#input" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Input</h2>
+<p>An input operation is one where we read or receive data from a component in our circuit - a sensor.
+As discussed in the <a href="/ruby-coders/docs/guides/circuits">Circuits</a> section, different sensors can have <a href="/ruby-coders/docs/guides/circuits#analog-and-digital-signals">digital as well as analog signals</a>.</p>
+<table>
+<thead>
+<tr><th style="text-align:left">Signal</th><th>Arduino instruction</th><th>Explanation</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">Analog</td><td>analogRead(pin)</td><td>Returns an integer value between 0 and 1023 read on <code>pin</code></td></tr>
+<tr><td style="text-align:left">Digital</td><td>digitalRead(pin)</td><td>Returns either 0 (LOW) or 1 (HIGH) read on <code>pin</code></td></tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code class="hljs css language-Arduino"><span class="hljs-comment">// Read the value from a button connected to digital pin 2</span>
+buttonState = <span class="hljs-built_in">digitalRead</span>(<span class="hljs-number">2</span>);
+
+<span class="hljs-comment">// Read the value from a sensor connected to analog pin A3</span>
+sensorReading = <span class="hljs-built_in">analogRead</span>(A3);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="output"></a><a href="#output" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Output</h2>
+<p>Conversely, an output operation is one where we send data to a component in our circuit - an actuator.</p>
+<table>
+<thead>
+<tr><th style="text-align:left">Signal</th><th>Arduino instruction</th><th>Explanation</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">Analog</td><td>analogWrite(pin, value)</td><td>Sends a value between 0 and 1023 to <code>pin</code></td></tr>
+<tr><td style="text-align:left">Digital</td><td>digitalWrite(pin, value)</td><td>Sends either 0 (LOW) or 1 (HIGH) to <code>pin</code></td></tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<pre><code class="hljs css language-Arduino"><span class="hljs-comment">// Sending a HIGH signal (same as value 1) to pin 3</span>
+<span class="hljs-built_in">digitalWrite</span>(<span class="hljs-number">3</span>, <span class="hljs-literal">HIGH</span>);
+
+<span class="hljs-comment">// Sending a state of 123 to pin A1 </span>
+<span class="hljs-built_in">analogWrite</span>(A1, <span class="hljs-number">123</span>);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="decision-making"></a><a href="#decision-making" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Decision-making</h2>
+<p>To implement decision-making in programming, we use <strong>conditionals</strong>. They allow us to determine what should happen (which instructions should be executed) based on conditions we define.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="hljs css language-Arduino"><span class="hljs-comment">// A simple if conditional</span>
+<span class="hljs-keyword">if</span> (condition) {
+    <span class="hljs-comment">// Instructions to be executed only if condition is true</span>
+} 
+
+<span class="hljs-comment">// if-else conditional</span>
+<span class="hljs-comment">// used when we check for two possible outcomes of a condition</span>
+<span class="hljs-keyword">if</span> (condition) {
+    <span class="hljs-comment">// Instructions to be executed if condition is true</span>
+} <span class="hljs-keyword">else</span> {
+   <span class="hljs-comment">// Instructions to be executed if condition is false </span>
+}
+
+<span class="hljs-comment">// if-else-if conditional</span>
+<span class="hljs-comment">// used when we check for more than two possible outcomes of a condition</span>
+<span class="hljs-keyword">if</span> (condition1) {
+    <span class="hljs-comment">// Instructions to be executed if condition1 is true</span>
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (condition2) {
+   <span class="hljs-comment">// Instructions to be executed if condition1 is false but condition2 is true </span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// Instructions to be executed if all conditions are false </span>
+}
+</code></pre>
+<p>Where <code>condition</code> can generally be one of the following:</p>
+<table>
+<thead>
+<tr><th style="text-align:left">Operator</th><th>Description</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">==</td><td>Equality</td><td><code>buttonState == LOW</code></td></tr>
+<tr><td style="text-align:left">!=</td><td>Inequality</td><td><code>buttonState != LOW</code></td></tr>
+<tr><td style="text-align:left">&gt;</td><td>Greater than</td><td><code>sensorReading &gt; 300</code></td></tr>
+<tr><td style="text-align:left">&gt;=</td><td>Greater than or equal</td><td><code>sensorReading &gt;= 300</code></td></tr>
+<tr><td style="text-align:left">&lt;</td><td>Less than</td><td><code>sensorReading &lt; 300</code></td></tr>
+<tr><td style="text-align:left">&lt;</td><td>Less than or equal</td><td><code>sensorReading &lt;= 300</code></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="serial"></a><a href="#serial" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Serial</h2>
+<p>A very important programming functionality we'll use has to do with <strong>getting information from the Arduino as our program is being executed</strong>. The Serial port provides this communication and we don't need to create a circuit for it.</p>
+<h3><a class="anchor" aria-hidden="true" id="configuration"></a><a href="#configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h3>
+<pre><code class="hljs css language-Arduino"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// Initiate the serial port and configure it to the transfer speed of 9600 bits per second</span>
+    <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="manipulation"></a><a href="#manipulation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Manipulation</h3>
+<pre><code class="hljs css language-Arduino"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-comment">// Print the reading from A0 always at a new line</span>
+    <span class="hljs-built_in">Serial</span>.<span class="hljs-built_in">println</span>( <span class="hljs-built_in">analogRead</span>(A0) );
+
+    <span class="hljs-comment">// Wait 0.5seconds (500 milliseconds) before executing the loop function again</span>
+    <span class="hljs-built_in">delay</span>(<span class="hljs-number">500</span>);
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="delay"></a><a href="#delay" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delay</h2>
+<p>As we saw in the last example, the <code>delay()</code> function can be used to pause the execution of our program for a specified time.</p>
+<p><strong>Syntax</strong> <code>delay(number_of_milliseconds)</code></p>
+<p><strong>Example:</strong> delay(1000) for a 1sec pause, delay(5000) for 5secs, delay(50) for 50 milliseconds</p>
+<p>This can be useful whenever when <strong>we need a pause between the execution of instructions</strong> and it is <strong>commonly placed as the last instruction in the loop function</strong> to provide a pause before executing it again.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/ruby-coders/docs/en/guides/programming-part-1"><span class="arrow-prev">← </span><span>Programming Part 1</span></a><a class="docs-next button" href="/ruby-coders/docs/en/guides/components"><span>Components</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#input">Input</a></li><li><a href="#output">Output</a></li><li><a href="#decision-making">Decision-making</a></li><li><a href="#serial">Serial</a><ul class="toc-headings"><li><a href="#configuration">Configuration</a></li><li><a href="#manipulation">Manipulation</a></li></ul></li><li><a href="#delay">Delay</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright"><a href="https://educationmakers.ca/" target="_blank"><img src="/ruby-coders/docs/assets/img/edmakers-logo.png" alt="Education Makers" height="40"/></a><br/>Copyright © 2020 Ivan Ruby with ❤ at EducationMakers</section></footer></div></body></html>
