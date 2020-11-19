@@ -11,7 +11,7 @@
     "Tutorial": [
           "tutorial/tut-home",
           "tutorial/tut-wiring",
-          "tutorial/tut-calibration",
+          "tutorial/tut-configuration",
           "tutorial/tut-logic",
           "tutorial/tut-solution"
     ],

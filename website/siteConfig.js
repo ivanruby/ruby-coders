@@ -32,16 +32,19 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'join', label: 'Join us', align: 'left'},
+    {doc: 'join', label: 'Join us'},
     {doc: 'requirements', label: 'Getting started'},
     // {doc: 'educators', label: 'Educators'},
     // {doc: 'about', label: 'About us'},
+    {search: true}
   ],
   
-  // algolia: {
-  //   apiKey: '1b7ed12c8fb2bbf86875d1464be8fc0a',
-  //   indexName: 'dev_RUBYCODERS',
-  // },
+  algolia: {
+    apiKey: '',
+    app_id: '8MYOH7SNMW',
+    indexName: 'dev_RUBYCODERS',
+    placeholder: 'Ask me something'
+  },
 
   /* path to images for header/footer */
   headerIcon: '',

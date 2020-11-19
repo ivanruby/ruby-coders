@@ -1,6 +1,6 @@
 ---
-id: tut-calibration
-title: Calibration phase
+id: tut-configuration
+title: Configuration phase
 ---
 
 **Task**: Establish an association between the physical components in a circuit and their representations in your program. 
