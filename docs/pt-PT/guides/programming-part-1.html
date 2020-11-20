@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="pt-PT"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Parte de programação 1 · RubyCoders</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Como complemento à criação de circuitos electrónicos, podemos controlar como componentes se comportam usando programação - **criando um conjunto de instruções para o microcontrolador implementar**. Embora possamos usar tanto textos como programação baseada em visualidade com o Tinkercad Circuits, nas nossas atividades nos concentraremos apenas na programação baseada em texto."/><meta name="docsearch:language" content="pt-PT"/><meta property="og:title" content="Parte de programação 1 · RubyCoders"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivanruby.github.io/ruby-coders/"/><meta property="og:description" content="Como complemento à criação de circuitos electrónicos, podemos controlar como componentes se comportam usando programação - **criando um conjunto de instruções para o microcontrolador implementar**. Embora possamos usar tanto textos como programação baseada em visualidade com o Tinkercad Circuits, nas nossas atividades nos concentraremos apenas na programação baseada em texto."/><meta property="og:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/ruby-coders/docs/assets/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/ruby-coders/js/scrollSpy.js"></script><link rel="stylesheet" href="/ruby-coders/css/main.css"/><script src="/ruby-coders/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/ruby-coders/pt-PT"><h2 class="headerTitle">RubyCoders</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/ruby-coders/docs/pt-PT/join" target="_self">Junte-se a nós</a></li><li class="siteNavGroupActive"><a href="/ruby-coders/docs/pt-PT/requirements" target="_self">Primeiros Passos</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Ask me something" title="Ask me something"/></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/ruby-coders/img/language.svg" alt="Languages icon"/>Português</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/ruby-coders/docs/en/guides/programming-part-1">English</a></li><li><a href="/ruby-coders/docs/fr/guides/programming-part-1">Français</a></li><li><a href="/ruby-coders/docs/es-ES/guides/programming-part-1">Español</a></li><li><a href="https://crowdin.com/project/rubycoders" target="_blank" rel="noreferrer noopener">Ajudar a traduzir</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guias</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Primeiros Passos<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/home">Residencial</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/requirements">Requisitos</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/approach">Abordagem</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guias<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/guides/the-arduino">O Arduino</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/guides/circuits">Circuitos</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/ruby-coders/docs/pt-PT/guides/programming-part-1">Parte de programação 1</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/guides/programming-part-2">Parte 2 de programação</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/guides/components">Componentes</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorial<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/tutorial/tut-home">Introdução</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/tutorial/tut-wiring">Fase de fiação</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/tutorial/tut-configuration">Etapa de configuração</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/tutorial/tut-logic">Fase lógica</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/tutorial/tut-solution">Soluções</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Atividades<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Street lights</h4><ul><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/activity1/act1-prompts">Avisos</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/activity1/act1-solution">Soluções</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Temperature indicator</h4><ul><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/activity2/act2-prompts">Avisos</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/pt-PT/activity2/act2-solution">Soluções</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/rubycoders/pt-PT" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Parte de programação 1</h1></header><article><div><span><p>Como complemento à criação de circuitos electrónicos, podemos controlar como componentes se comportam usando programação - <strong>criando um conjunto de instruções para o microcontrolador implementar</strong>. Embora possamos usar tanto textos como programação baseada em visualidade com o Tinkercad Circuits, nas nossas atividades nos concentraremos apenas na programação baseada em texto.</p>
+<h2><a class="anchor" aria-hidden="true" id="regras-básicas"></a><a href="#regras-básicas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Regras Básicas</h2>
+<ul>
+<li>Uma instrução por linha</li>
+<li>Cada linha tem que terminar com ponto e vírgula e, em alguns casos, uma chave encaracolada <code>{ or }</code></li>
+<li>Use um espaçamento vertical e horizontal para tornar seu programa mais legível</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="estrutura-básica-de-um-programa-arduino"></a><a href="#estrutura-básica-de-um-programa-arduino" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Estrutura básica de um programa Arduino</h2>
+<pre><code class="hljs css language-Arduino"><span class="hljs-comment">// Qualquer linha que comece com duas barras diárias será ignorada pelo microcontrolador </span>
+<span class="hljs-comment">// Eles são chamados de comentários e vamos usá-los para descrever o que queremos que nosso programa faça</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// Instruções para configurar e inicializar componentes</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// Instruções para executar as tarefas que precisamos de nossos circuitos para fazer</span>
+}
+</code></pre>
+<p>Todos os programas devem ter uma configuração **** e <strong>loop</strong> funções/comandos escritos com a estrutura acima - exceto os comentários.</p>
+<p>Você pode ler mais sobre as funções <a href="https://www.arduino.cc/reference/en/language/structure/sketch/setup/">de configuração</a> e <a href="https://www.arduino.cc/reference/en/language/structure/sketch/loop/">loop</a> no site de referência do Arduino.</p>
+<h2><a class="anchor" aria-hidden="true" id="variáveis-e-datatypes"></a><a href="#variáveis-e-datatypes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variáveis e Datatypes</h2>
+<p>Precisamos de ter uma maneira de armazenar dados ao criar, receber e manipulá-los. Para fazer isso, usamos variáveis que são <strong>nomes para locais de memória usados para armazenar valores que usamos em nossos programas</strong>.</p>
+<p>Uma variável tem três partes importantes:</p>
+<ol>
+<li><p><strong>Nome:</strong> Podemos usar uma combinação de letras, números e caracteres especiais (_ e $) sem espaços</p>
+<p><strong>Exemplo:</strong> <code>leitura do sensor</code> não é um nome válido. Em vez disso, deveria ser <code>sensor</code> ou <code>sensor_reading</code> <br/><br/></p></li>
+<li><p><strong>Tipo de dado:</strong> Usamos para especificar quais tipos de valores armazenaremos na variável</p>
+<p><strong>Tipos de dados comuns</strong></p>
+<table>
+<thead>
+<tr><th style="text-align:left">Datatype</th><th>Utilização</th><th>Exemplo</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">byte</td><td>Números inteiros entre 0 e 255</td><td>Variáveis para fixar números no Arduino</td></tr>
+<tr><td style="text-align:left">int</td><td>Números inteiros entre -32768 e 32767</td><td>Variáveis para leituras de um sensor analógico</td></tr>
+<tr><td style="text-align:left">flutuante</td><td>Números decimais entre ght-aligned</td><td>Uma variável segurando o valor calculado a partir da leitura de um sensor de temperatura</td></tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>Valor armazenado:</strong> Estes são os dados que adicionamos à variável e recuperamos dela</p>
+<p><strong>Exemplos</strong></p>
+<pre><code class="hljs css language-Arduino"><span class="hljs-comment">// Podemos criar uma variável e imediatamente adicionar um valor</span>
+<span class="hljs-keyword">byte</span> ledPin = <span class="hljs-number">2</span>;
+
+<span class="hljs-comment">// Nós também podemos primeiro criar uma variável</span>
+<span class="hljs-keyword">byte</span> buttonPin;
+
+<span class="hljs-comment">// E adicione um valor a ele</span>
+buttonPin = <span class="hljs-number">3</span>;
+
+</code></pre></li>
+</ol>
+<blockquote>
+<p><strong>Nota:</strong> É uma boa prática criar ou declarar variáveis no topo do seu programa - antes da função de configuração</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/ruby-coders/docs/pt-PT/guides/circuits"><span class="arrow-prev">← </span><span>Circuitos</span></a><a class="docs-next button" href="/ruby-coders/docs/pt-PT/guides/programming-part-2"><span>Parte 2 de programação</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#regras-básicas">Regras Básicas</a></li><li><a href="#estrutura-básica-de-um-programa-arduino">Estrutura básica de um programa Arduino</a></li><li><a href="#variáveis-e-datatypes">Variáveis e Datatypes</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright"><a href="https://educationmakers.ca/" target="_blank"><img src="/ruby-coders/docs/assets/img/edmakers-logo.png" alt="Education Makers" height="40"/></a><br/>Copyright © 2020 Ivan Ruby with ❤ at EducationMakers</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: '8MYOH7SNMW',
+                apiKey: '1b7ed12c8fb2bbf86875d1464be8fc0a',
+                indexName: 'dev_RUBYCODERS',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="es-ES"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Fase lógica · RubyCoders</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**Tarea**: Después de enrollar y configurar los componentes físicos, diseñar, probar e implementar los pasos/operaciones lógicas para hacer que el proyecto funcione."/><meta name="docsearch:language" content="es-ES"/><meta property="og:title" content="Fase lógica · RubyCoders"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivanruby.github.io/ruby-coders/"/><meta property="og:description" content="**Tarea**: Después de enrollar y configurar los componentes físicos, diseñar, probar e implementar los pasos/operaciones lógicas para hacer que el proyecto funcione."/><meta property="og:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/ruby-coders/docs/assets/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/ruby-coders/js/scrollSpy.js"></script><link rel="stylesheet" href="/ruby-coders/css/main.css"/><script src="/ruby-coders/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/ruby-coders/es-ES"><h2 class="headerTitle">RubyCoders</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/ruby-coders/docs/es-ES/join" target="_self">Únete a nosotros</a></li><li class="siteNavGroupActive"><a href="/ruby-coders/docs/es-ES/requirements" target="_self">Comenzando</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Ask me something" title="Ask me something"/></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/ruby-coders/img/language.svg" alt="Languages icon"/>Español</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/ruby-coders/docs/en/tutorial/tut-logic">English</a></li><li><a href="/ruby-coders/docs/fr/tutorial/tut-logic">Français</a></li><li><a href="/ruby-coders/docs/pt-PT/tutorial/tut-logic">Português</a></li><li><a href="https://crowdin.com/project/rubycoders" target="_blank" rel="noreferrer noopener">Ayuda a traducir</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tutorial</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Comenzando<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/home">Inicio</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/requirements">Requisitos</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/approach">Enfoque</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guías<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/guides/the-arduino">El Arduino</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/guides/circuits">Circuitos</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/guides/programming-part-1">Programación Parte 1</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/guides/programming-part-2">Programación Parte 2</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/guides/components">Componentes</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorial<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/tutorial/tut-home">Introducción</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/tutorial/tut-wiring">Fase de conducción</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/tutorial/tut-configuration">Fase de configuración</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/ruby-coders/docs/es-ES/tutorial/tut-logic">Fase lógica</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/tutorial/tut-solution">Solución</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Actividades<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Street lights</h4><ul><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/activity1/act1-prompts">Promptos</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/activity1/act1-solution">Solución</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Temperature indicator</h4><ul><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/activity2/act2-prompts">Promptos</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/es-ES/activity2/act2-solution">Solución</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/rubycoders/es-ES" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Fase lógica</h1></header><article><div><span><p><strong>Tarea</strong>: Después de enrollar y configurar los componentes físicos, diseñar, probar e implementar los pasos/operaciones lógicas para hacer que el proyecto funcione.</p>
+<p>Lo hará haciendo clic en un enlace a un proyecto Tinkercad y completando la actividad allí. Aquí está una tarea de calibración de ejemplo: <a href="https://www.tinkercad.com/things/5IvAKVC2TOg" target="_blank">Utilizando un LED con un botón - Parte 3 - Tema</a></p>
+<p><strong>Enfoque</strong>: <code>Resolución de problemas</code>, <code>pensamiento algorítmico</code>, <code>Programación</code>, <code>Pruebas</code></p>
+<p><strong>Lo que aprendemos</strong>: Sobre cómo generar algoritmos, implementar y probar diferentes instrucciones de Arduino C/C++</p>
+<p><strong>Solución de ejemplo</strong>: <em>Completando el circuito que conecta un microcontrolador Arduino, un LED y un botón</em></p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-74-tab-75" class="nav-link active" data-group="group_74" data-tab="tab-group-74-content-75">Algorithm</div><div id="tab-group-74-tab-76" class="nav-link" data-group="group_74" data-tab="tab-group-74-content-76">Equivalent programming instructions</div></div><div class="tab-content"><div id="tab-group-74-content-75" class="tab-pane active" data-group="group_74" tabindex="-1"><div><span><pre><code class="hljs css language-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span><br /></span>{<br />    <span class="hljs-comment">/* Paso 3. Compruebe si el botón está presionado */</span><br />    <span class="hljs-comment">/* Paso 4. Si se presiona, activa el LED */</span><br />    <span class="hljs-comment">/* Paso 5. Si no está presionado, apaga el LED */</span><br />}<br /></code></pre>
+</span></div></div><div id="tab-group-74-content-76" class="tab-pane" data-group="group_74" tabindex="-1"><div><span><pre><code class="hljs css language-C"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span><br /></span>{<br />    <span class="hljs-comment">/* Paso 3. Compruebe si el botón está presionado */</span><br />    <span class="hljs-keyword">if</span> ( <span class="hljs-built_in">digitalRead</span>(button) == BAJO ) {<br /><br />        <span class="hljs-comment">/* Paso 4. Si se presiona, activa el LED */</span><br />        <span class="hljs-built_in">digitalWrite</span>(LED, <span class="hljs-literal">HIGH</span>);<br />    }<br /><br />    <span class="hljs-comment">/* Paso 5. Si no está presionado */</span><br />    <span class="hljs-keyword">if</span> ( <span class="hljs-built_in">digitalRead</span>(button) == ALTA ) {<br /><br />        <span class="hljs-comment">/* apaga el LED */</span><br />        <span class="hljs-built_in">digitalWrite</span>(LED, MÁS<br />    }<br />}<br /></code></pre>
+</span></div></div></div></div>
+<p>Después de la fase lógica, siempre se comparte una solución para permitir al grupo o individuo validar ideas.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/ruby-coders/docs/es-ES/tutorial/tut-configuration"><span class="arrow-prev">← </span><span>Fase de configuración</span></a><a class="docs-next button" href="/ruby-coders/docs/es-ES/tutorial/tut-solution"><span>Solución</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright"><a href="https://educationmakers.ca/" target="_blank"><img src="/ruby-coders/docs/assets/img/edmakers-logo.png" alt="Education Makers" height="40"/></a><br/>Copyright © 2020 Ivan Ruby with ❤ at EducationMakers</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: '8MYOH7SNMW',
+                apiKey: '1b7ed12c8fb2bbf86875d1464be8fc0a',
+                indexName: 'dev_RUBYCODERS',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

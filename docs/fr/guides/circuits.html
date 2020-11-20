@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Circuits · RubyCoders</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Un circuit électronique est un chemin fermé ou une interconnexion de composants électroniques différents et de deux terminaux (positifs et négatifs) d&#x27;une source d&#x27;alimentation. Il devrait toujours y avoir un *chemin ininterrompu entre les deux extrémités de la source d&#x27;alimentation*, sinon le circuit sera incomplet et les composants ne fonctionneront pas."/><meta name="docsearch:language" content="fr"/><meta property="og:title" content="Circuits · RubyCoders"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivanruby.github.io/ruby-coders/"/><meta property="og:description" content="Un circuit électronique est un chemin fermé ou une interconnexion de composants électroniques différents et de deux terminaux (positifs et négatifs) d&#x27;une source d&#x27;alimentation. Il devrait toujours y avoir un *chemin ininterrompu entre les deux extrémités de la source d&#x27;alimentation*, sinon le circuit sera incomplet et les composants ne fonctionneront pas."/><meta property="og:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/ruby-coders/docs/assets/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/ruby-coders/js/scrollSpy.js"></script><link rel="stylesheet" href="/ruby-coders/css/main.css"/><script src="/ruby-coders/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/ruby-coders/fr"><h2 class="headerTitle">RubyCoders</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/ruby-coders/docs/fr/join" target="_self">Rejoignez-nous</a></li><li class="siteNavGroupActive"><a href="/ruby-coders/docs/fr/requirements" target="_self">Commencer</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Ask me something" title="Ask me something"/></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/ruby-coders/img/language.svg" alt="Languages icon"/>Français</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/ruby-coders/docs/en/guides/circuits">English</a></li><li><a href="/ruby-coders/docs/pt-PT/guides/circuits">Português</a></li><li><a href="/ruby-coders/docs/es-ES/guides/circuits">Español</a></li><li><a href="https://crowdin.com/project/rubycoders" target="_blank" rel="noreferrer noopener">Aider à traduire</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tutoriels</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Commencer<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/home">Domicile</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/requirements">Exigences</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/approach">Approche</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutoriels<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/guides/the-arduino">L’Arduino</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/ruby-coders/docs/fr/guides/circuits">Circuits</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/guides/programming-part-1">Programmation Partie 1</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/guides/programming-part-2">Programmation Partie 2</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/guides/components">Composants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutoriel<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/tutorial/tut-home">Introduction</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/tutorial/tut-wiring">Phase de câblage</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/tutorial/tut-configuration">Phase de configuration</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/tutorial/tut-logic">Phase logique</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/tutorial/tut-solution">Solution</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Activités<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Street lights</h4><ul><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/activity1/act1-prompts">Demandes</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/activity1/act1-solution">Solution</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Temperature indicator</h4><ul><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/activity2/act2-prompts">Demandes</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/fr/activity2/act2-solution">Solution</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/rubycoders/fr" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Circuits</h1></header><article><div><span><p>Un circuit électronique est un chemin fermé ou une interconnexion de composants électroniques différents et de deux terminaux (positifs et négatifs) d'une source d'alimentation. Il devrait toujours y avoir un <em>chemin ininterrompu entre les deux extrémités de la source d'alimentation</em>, sinon le circuit sera incomplet et les composants ne fonctionneront pas.</p>
+<p><img src="/ruby-coders/docs/assets/img/simple-cell-circuit.png" alt="Circuit électoral simple"></p>
+<p>La carte Arduino peut également servir de source d'alimentation et nous établissons les connexions similaires au circuit ci-dessus en utilisant le <strong>3. v ou 5v comme le terminal positif</strong> et la broche <strong>GND comme le terminal négatif</strong>.</p>
+<p><img src="/ruby-coders/docs/assets/img/simple-arduino-circuit.png" alt="Circuit Arduino simple"></p>
+<h2><a class="anchor" aria-hidden="true" id="capteurs-et-actionneurs"></a><a href="#capteurs-et-actionneurs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Capteurs et actionneurs</h2>
+<p>En dehors de l'Arduino comme source d'énergie, il existe une variété d'autres composants que nous utilisons généralement dans nos circuits. Ils peuvent largement être catégorisés dans les groupes suivants :</p>
+<ul>
+<li><p><strong>Détecteurs :</strong> Composants qui capturent quelques informations de l'environnement et le transfèrent sur la carte Arduino dans un format électronique.</p>
+<p><strong>Exemple:</strong> Un bouton, un capteur de température, un capteur de distance, un capteur d'humidité</p></li>
+<li><p><strong>Actuateurs :</strong> Les composantes qui affichent, démontrent ou représentent certaines informations de l'Arduino sur l'environnement.</p>
+<p><strong>Exemple:</strong> LED, moteurs, buzzer</p></li>
+</ul>
+<blockquote>
+<p>En dehors des <em>capteurs</em> et <em>actionneurs</em>, les circuits que nous allons construire incluront également d'autres composants comme une résistance. Celles-ci ne sont pas incluses dans l'une ou l'autre catégorie et sont utilisées dans le circuit pour permettre à la fois aux capteurs et aux actionneurs de fonctionner.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="signaux-analogiques-et-numériques"></a><a href="#signaux-analogiques-et-numériques" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Signaux analogiques et numériques</h2>
+<p>Signaux électroniques, la façon dont les données sont représentées électroniquement, peut prendre deux formes :</p>
+<ul>
+<li><p><strong>Numérique :</strong> Signaux qui ne peuvent avoir que deux états ou valeurs possibles : <em>Hauts ou Bas</em>, <em>On ou Off</em>, <em>Vrai ou Faux</em>. Ils sont également appelés binaires.</p></li>
+<li><p><strong>Analogique :</strong> Signaux qui peuvent avoir une plage continue d'état ou de valeurs : <em>0 à 255</em> et <em>0 à 1023</em> qui sont les plages que nous pouvons écrire aux actionneurs et lire à partir de capteurs, respectivement.</p></li>
+</ul>
+<p>Il est important de déterminer et d'être attentif au type de signal dans notre circuit car les deux capteurs et les actionneurs <strong>peuvent être des deux types</strong>. Ainsi, lorsque nous les manipulons (réception ou envoi de données) nous devons le faire selon le signal approprié.</p>
+<h2><a class="anchor" aria-hidden="true" id="le-tableau-de-bord"></a><a href="#le-tableau-de-bord" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Le tableau de bord</h2>
+<p>Lors de la création de nos circuits, nous pouvons simplement relier des fils entre nos composants ou utiliser un dispositif qui facilite l'organisation de ces connexions.</p>
+<p>Supposons que nous ayons besoin d'alimenter deux LED à l'aide de la carte Arduino. Pour ce faire, nous pouvons simplement établir les connexions nécessaires à l'aide de fils.</p>
+<p><img src="/ruby-coders/docs/assets/img/arduino-two-leds.png" alt="Circuit Arduino avec deux LEDs"></p>
+<p>Cependant, ces connexions peuvent rapidement devenir difficiles à gérer et à comprendre avec une augmentation du nombre de composants dans notre circuit. Pour éviter la confusion ou mieux gérer les connexions, nous pouvons utiliser <strong>painboards</strong>.</p>
+<p><img src="/ruby-coders/docs/assets/img/arduino-breadboard-simple.png" alt="Arduino alimentant un tableau"></p>
+<p>Dans un tableau de bord, nous avons <strong>lignes et colonnes de points interconnectés</strong>. Dans l'image ci-dessus, chaque point de la dernière rangée (en rouge) sera connecté à la broche 3.3v de la carte Arduino. De même, chaque point de la ligne avant le dernier (en noir) sera connecté à la broche GND.</p>
+<p>Au milieu de la planche, les interconnexions changent d'orientation. Nous avons deux ensembles de points interconnectés formant des colonnes distinctes <strong>a à e</strong> et <strong>f à j</strong>.</p>
+<p>De cette façon, pour connecter nos deux LED, il nous suffit de les placer sur le tableau de bord avec chaque terminal dans une colonne différente. Ensuite, nous connectons la colonne avec le terminal négatif de la LED à la ligne connectée à GND. Nous faisons la même chose pour le terminal positif et répéter pour l'autre LED.</p>
+<p><img src="/ruby-coders/docs/assets/img/arduino-breadboard-with-leds.png" alt="Arduino alimentant un tableau"></p>
+<blockquote>
+<p>« On dirait qu'il y a des confusions? » Ne vous inquiétez pas. Vous le comprendrez mieux avec la pratique</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/ruby-coders/docs/fr/guides/the-arduino"><span class="arrow-prev">← </span><span>L’Arduino</span></a><a class="docs-next button" href="/ruby-coders/docs/fr/guides/programming-part-1"><span>Programmation Partie 1</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#capteurs-et-actionneurs">Capteurs et actionneurs</a></li><li><a href="#signaux-analogiques-et-numériques">Signaux analogiques et numériques</a></li><li><a href="#le-tableau-de-bord">Le tableau de bord</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright"><a href="https://educationmakers.ca/" target="_blank"><img src="/ruby-coders/docs/assets/img/edmakers-logo.png" alt="Education Makers" height="40"/></a><br/>Copyright © 2020 Ivan Ruby with ❤ at EducationMakers</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: '8MYOH7SNMW',
+                apiKey: '1b7ed12c8fb2bbf86875d1464be8fc0a',
+                indexName: 'dev_RUBYCODERS',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
