@@ -41,7 +41,7 @@ const siteConfig = {
   
   algolia: {
     apiKey: '1b7ed12c8fb2bbf86875d1464be8fc0a',
-    app_id: '8MYOH7SNMW',
+    appId: '8MYOH7SNMW',
     indexName: 'dev_RUBYCODERS',
     placeholder: 'Ask me something'
   },

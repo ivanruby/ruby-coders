@@ -8,7 +8,8 @@
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
     "crowdin-upload": "cd .. && crowdin upload sources --auto-update -b master",
-    "crowdin-download": "cd .. && crowdin download -b master"
+    "crowdin-download": "cd .. && crowdin download -b master",
+    "crawl": "cd ../../docsearch && py docsearch run ../ruby-coders/docsearch.json"
   },
   "devDependencies": {
     "docusaurus": "^1.14.6"
