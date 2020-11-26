@@ -19,6 +19,14 @@
     "Activities": [
       {
         "type": "subcategory",
+        "label": "Blinking LEDs with a Button",
+        "ids": [
+          "activity3/act3-prompts",
+          "activity3/act3-solution"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Street lights",
         "ids": [
           "activity1/act1-prompts",
