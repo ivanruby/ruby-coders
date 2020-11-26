@@ -18,7 +18,7 @@ LEDs **only ON** for:
 - Red	 : Temperature above 30C
 
 ## Initial project state
-![Initial circuit state](assets/img/act2/initial_state.png)
+![Initial circuit state](assets/img/initial-states/act-2.png)
 
 ## Wiring
 Click on the link below and complete the wiring of the circuit.

@@ -22,7 +22,7 @@ also called photoresistor
 - Ambient light intensity equal or more than 1/2 max: LED ON
 
 ## Initial project state
-![Initial circuit state](assets/img/act1/initial_state.png)
+![Initial circuit state](assets/img/initial-states/act-1.png)
 
 ## Wiring
 Click on the link below and complete the wiring of the circuit.
