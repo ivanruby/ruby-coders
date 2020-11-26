@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>LED Blinking with a button · RubyCoders</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="```text"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="LED Blinking with a button · RubyCoders"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ivanruby.github.io/ruby-coders/"/><meta property="og:description" content="```text"/><meta property="og:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ivanruby.github.io/ruby-coders/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/ruby-coders/docs/assets/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'G-F6PSX1NESH', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/ruby-coders/js/scrollSpy.js"></script><link rel="stylesheet" href="/ruby-coders/css/main.css"/><script src="/ruby-coders/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/ruby-coders/en"><h2 class="headerTitle">RubyCoders</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/ruby-coders/docs/en/join" target="_self">Join us</a></li><li class="siteNavGroupActive"><a href="/ruby-coders/docs/en/requirements" target="_self">Getting started</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Ask me something" title="Ask me something"/></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/ruby-coders/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/ruby-coders/docs/fr/activity3/act3-prompts">Français</a></li><li><a href="/ruby-coders/docs/pt-PT/activity3/act3-prompts">Português</a></li><li><a href="/ruby-coders/docs/es-ES/activity3/act3-prompts">Español</a></li><li><a href="https://crowdin.com/project/rubycoders" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Blinking LEDs with a Button</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/home">Home</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/requirements">Requirements</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/approach">Approach</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/guides/the-arduino">The Arduino</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/guides/circuits">Circuits</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/guides/programming-part-1">Programming Part 1</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/guides/programming-part-2">Programming Part 2</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/guides/components">Components</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Tutorial<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/tutorial/tut-home">Introduction</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/tutorial/tut-wiring">Wiring phase</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/tutorial/tut-configuration">Configuration phase</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/tutorial/tut-logic">Logic phase</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/tutorial/tut-solution">Solution</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Activities<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Blinking LEDs with a Button</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/ruby-coders/docs/en/activity3/act3-prompts">Prompts</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/activity3/act3-solution">Solution</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Street lights</h4><ul><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/activity1/act1-prompts">Prompts</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/activity1/act1-solution">Solution</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Temperature indicator</h4><ul><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/activity2/act2-prompts">Prompts</a></li><li class="navListItem"><a class="navItem" href="/ruby-coders/docs/en/activity2/act2-solution">Solution</a></li></ul></div></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">LED Blinking with a button</h1></header><article><div><span><pre><code class="hljs css language-text">In this project, two LEDs should blink alternating between them
+once a button is pressed. Otherwise, both LEDs should stay ON.   
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="states"></a><a href="#states" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>States</h2>
+<ul>
+<li>Button not pressed: LED A, B ON</li>
+<li>Button pressed: LED A ON, LED B OFF for 1sec, and then the opposite</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="initial-project-state"></a><a href="#initial-project-state" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initial project state</h2>
+<p><img src="/ruby-coders/docs/assets/img/initial-states/act-3.png" alt="Initial circuit state"></p>
+<h2><a class="anchor" aria-hidden="true" id="wiring"></a><a href="#wiring" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wiring</h2>
+<p>Click on the link below and complete the wiring of the circuit.</p>
+<p>Link: <a href="https://www.tinkercad.com/things/iRBJ9yMJIBk" target="_blank">Part 1: Wiring</a></p>
+<h2><a class="anchor" aria-hidden="true" id="calibration"></a><a href="#calibration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Calibration</h2>
+<p>Now, you can move on to start writing your program and testing your sensor.
+Click on the link below and complete the calibration and configuration of the circuit.</p>
+<p>Link: <a href="https://www.tinkercad.com/things/g6zk7oWU83r" target="_blank">Part 2: Calibration</a></p>
+<h2><a class="anchor" aria-hidden="true" id="logic"></a><a href="#logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logic</h2>
+<p>Lastly, and most importantly, you have to create the logic to make your circuit behave as needed for the project. Click on the link below and complete the logic of the circuit.</p>
+<p>Link: <a href="https://www.tinkercad.com/things/hOsuUEL5WxY" target="_blank">Part 3: Logic</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/ruby-coders/docs/en/tutorial/tut-solution"><span class="arrow-prev">← </span><span>Solution</span></a><a class="docs-next button" href="/ruby-coders/docs/en/activity3/act3-solution"><span>Solution</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#states">States</a></li><li><a href="#initial-project-state">Initial project state</a></li><li><a href="#wiring">Wiring</a></li><li><a href="#calibration">Calibration</a></li><li><a href="#logic">Logic</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright"><a href="https://educationmakers.ca/" target="_blank"><img src="/ruby-coders/docs/assets/img/edmakers-logo.png" alt="Education Makers" height="40"/></a><br/>Copyright © 2020 Ivan Ruby with ❤ at EducationMakers</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                appId: '8MYOH7SNMW',
+                apiKey: '1b7ed12c8fb2bbf86875d1464be8fc0a',
+                indexName: 'dev_RUBYCODERS',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
