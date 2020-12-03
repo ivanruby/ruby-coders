@@ -19,6 +19,14 @@
     "Activities": [
       {
         "type": "subcategory",
+        "label": "Random color game",
+        "ids": [
+          "activity4/act4-prompts",
+          "activity4/act4-solution"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Blinking LEDs with a Button",
         "ids": [
           "activity3/act3-prompts",
