@@ -10,5 +10,10 @@
     "lvl3": "li",
     "text": "p"
   },
-  "nb_hits": 3240
+  "custom_settings": {
+    "attributesForFaceting": [
+      "language"
+    ]
+  },
+  "nb_hits": 3477
 }

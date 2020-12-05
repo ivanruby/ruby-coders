@@ -43,7 +43,10 @@ const siteConfig = {
     apiKey: '1b7ed12c8fb2bbf86875d1464be8fc0a',
     appId: '8MYOH7SNMW',
     indexName: 'dev_RUBYCODERS',
-    placeholder: 'Ask me something'
+    placeholder: 'Ask me something',
+    algoliaOptions: {
+      facetFilters: ["language:LANGUAGE"]
+    }
   },
 
   /* path to images for header/footer */
@@ -80,7 +83,12 @@ const siteConfig = {
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    {
+      src: '/ruby-coders/docs/assets/js/algolia.language.filter.js'
+    }
+  ],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
@@ -105,7 +113,7 @@ const siteConfig = {
   // template. For example, if you need your repo's URL...
   // repoUrl: 'https://github.com/facebook/test-site',
   gaTrackingId: "G-F6PSX1NESH",
-  gaGTag: true,
+  gaGtag: true,
   
   translationRecruitingLink: 'https://crowdin.com/project/rubycoders'
 };
