@@ -2,9 +2,10 @@
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
-    "build": "docusaurus-build",
     "prepare": "docusaurus-write-translations && npm run crowdin-upload",
     "ready": "npm run crowdin-download && npm run crawl",
+    "build": "docusaurus-build",
+    "postbuild": "xcopy build\\rubycoding\\ ..\\..\\rc-gh-pages\\ /E/Y && git add . && git commit && git push origin gh-pages",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
     "crowdin-upload": "cd .. && crowdin upload sources --auto-update -b master",
