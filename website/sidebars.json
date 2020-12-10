@@ -19,18 +19,18 @@
     "Activities": [
       {
         "type": "subcategory",
-        "label": "Random color game",
-        "ids": [
-          "activity4/act4-prompts",
-          "activity4/act4-solution"
-        ]
-      },
-      {
-        "type": "subcategory",
         "label": "Blinking LEDs with a Button",
         "ids": [
           "activity3/act3-prompts",
           "activity3/act3-solution"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Morse Code",
+        "ids": [
+          "activity5/act5-prompts",
+          "activity5/act5-solution"
         ]
       },
       {
@@ -47,6 +47,14 @@
         "ids": [
           "activity2/act2-prompts",
           "activity2/act2-solution"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Random color game",
+        "ids": [
+          "activity4/act4-prompts",
+          "activity4/act4-solution"
         ]
       }
     ]
